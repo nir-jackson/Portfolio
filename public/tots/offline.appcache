@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1478013983
+#1478031425
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -49,6 +49,9 @@ images/sprite7-sheet0.png
 images/clickzone-sheet0.png
 images/sprite8-sheet0.png
 images/sprite9-sheet0.png
+images/e-sheet0.png
+images/r-sheet0.png
+images/w-sheet0.png
 media/chew.m4a
 media/chew.ogg
 media/squish.m4a
