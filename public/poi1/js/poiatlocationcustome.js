@@ -15,24 +15,25 @@ var World = {
 		
 		
         jsonFile = $.getJSON( "JsonFile.json", function() {
-			
-          alert("success!");
+			AR.logger.debug("success!");
+          
         })
           .done(function() {
-            console.log( "second success" );
+            AR.logger.debug( "second success" );
           })
           .fail(function() {
-            console.log( "error" );
+            AR.logger.debug( "error" );
           })
           .always(function() {
-            console.log( "complete" );
+            AR.logger.debug( "complete" );
           });
 
         // Perform other work here ...
 		
+		AR.logger.debug("lat= " + jsonFile.markers[0].lat);
 		
         World.markerDrawable_idle = new AR.ImageResource("assets/marker_idle.png");
-		alert("lat= " + jsonFile.markers[0].lat);
+		
         var markerLocation = new AR.GeoLocation( jsonFile.markers[0].lat, jsonFile.markers[0].lon, 100.0);
         var markerImageDrawable_idle = new AR.ImageDrawable(World.markerDrawable_idle, 2.5, {
             zOrder: 0,
@@ -81,18 +82,19 @@ var World = {
 		*/
 		if (!World.initiallyLoadedData) {
 			// creates a poi object with a random location near the user's location
-			alert("initilize the world biatch!");
+			//alert("initilize the world biatch!");
+			AR.logger.debug("Initializing World");
 			World.loadPoisFromJsonData();
 			World.initiallyLoadedData = true;
 		}
-	},
+	}
 };
 
 /* 
 	Set a custom function where location changes are forwarded to. There is also a possibility to set AR.context.onLocationChanged to null. In this case the function will not be called anymore and no further location updates will be received. 
 */
 
-alert("Initial");
+//alert("Initial");
 AR.logger.activateDebugMode();
 AR.logger.debug("TEST");
 AR.context.onLocationChanged = World.locationChanged;
