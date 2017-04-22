@@ -1,40 +1,4 @@
-var jsonFile =
-{
-	"markers":[
-	{
-		"name":"הבית ממול",
-		"address":"דב גרונר 8, פתח תקווה",
-		"lat":32.091949,
-		"lon":34.893448,
-		"rating":1,
-		"price":1,
-		"description":"בית מכוער בפתח תקווה, מה עוד אתה רוצה לדעת?",
-		"isActive":true
-	},
-	{
-		"name":"סופר פארם",
-		"address":"וייצמן 53 תל אביב",
-		"lat":32.085036,
-		"lon":34.789210,
-		"rating":4,
-		"price":4,
-		"description":"בית מרקחת אדיר עם כל הדברים הכי שווים. כמו בדיקות הריון וקונדומים! יאללה בואו!",
-		"isActive":true
-	},
-	{
-		"name":"בנק אגוד",
-		"address":"וייצמן 32 תל אביב",
-		"lat":32.085086,
-		"lon":34.789564,
-		"rating":2,
-		"price":5,
-		"description":"בנק אגוד, סתם בנק מעפן עם שם מוזר שאף אחד לא מבין מה המטרה שלו במדינה הזאת",
-		"isActive":true
-	}
-	]
-	
-	
-};
+var jsonFile ;
 
 
 // implementation of AR-Experience (aka "World")
@@ -49,9 +13,10 @@ var World = {
 	// called to inject new POI data
 	loadPoisFromJsonData: function loadPoisFromJsonDataFn() {
 		
-		/*
+		\
         jsonFile = $.getJSON( "JsonFile.json", function() {
-          console.log( "success" );
+			
+          alert("success!");
         })
           .done(function() {
             console.log( "second success" );
@@ -65,7 +30,7 @@ var World = {
 
         // Perform other work here ...
 		
-		*/
+		
         World.markerDrawable_idle = new AR.ImageResource("assets/marker_idle.png");
 		alert("lat= " + jsonFile.markers[0].lat);
         var markerLocation = new AR.GeoLocation( jsonFile.markers[0].lat, jsonFile.markers[0].lon, 100.0);
@@ -81,12 +46,12 @@ var World = {
 
 
 
-		/*
+		
         // Set another completion function for the request above
         jsonFile.complete(function() {
           console.log( "second complete" );
         });
-		*/
+		
 
 		// Updates status message as a user feedback that everything was loaded properly.
 		World.updateStatusMessage('1 place loaded');
@@ -116,7 +81,7 @@ var World = {
 		*/
 		if (!World.initiallyLoadedData) {
 			// creates a poi object with a random location near the user's location
-			alert("initilize the world biatch!");
+			//alert("initilize the world biatch!");
 			World.loadPoisFromJsonData();
 			World.initiallyLoadedData = true;
 		}
