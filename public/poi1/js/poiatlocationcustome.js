@@ -74,6 +74,7 @@ var World = {
 
 	// location updates, fired every time you call architectView.setLocation() in native environment
 	locationChanged: function locationChangedFn(lat, lon, alt, acc) {
+		AR.logger.debug("lat=" + lat + " lon=" + lon);
 		//alert("lacationChanged");
         //console.log("");
 		/*
@@ -93,6 +94,8 @@ var World = {
 */
 
 //alert("Initial")
+AR.logger.activateDebugMode();
+AR.logger.debug("1");
 AR.context.onLocationChanged = World.locationChanged;
 
 
