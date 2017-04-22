@@ -14,7 +14,7 @@ var World = {
 	loadPoisFromJsonData: function loadPoisFromJsonDataFn() {
 		
 		
-        jsonFile = $.getJSON( "JsonFile.json", function() {
+        jsonFile = $.getJSON( "http://nir-jackson-portfolio.herokuapp.com/poi1/js/JsonFile.json", function() {
 			AR.logger.debug("success!");
           
         })
