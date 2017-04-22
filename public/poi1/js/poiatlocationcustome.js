@@ -74,8 +74,8 @@ var World = {
 
 	// location updates, fired every time you call architectView.setLocation() in native environment
 	locationChanged: function locationChangedFn(lat, lon, alt, acc) {
-		AR.logger.debug("lat=" + lat + " lon=" + lon);
-		//alert("lacationChanged");
+		//AR.logger.debug("lat=" + lat + " lon=" + lon);
+		alert("lacationChanged lat= " + lat);
         //console.log("");
 		/*
 			The custom function World.onLocationChanged checks with the flag World.initiallyLoadedData if the function was already called. With the first call of World.onLocationChanged an object that contains geo information will be created which will be later used to create a marker using the World.loadPoisFromJsonData function.
