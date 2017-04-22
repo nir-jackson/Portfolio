@@ -14,7 +14,7 @@ var World = {
 	loadPoisFromJsonData: function loadPoisFromJsonDataFn() {
 		
 		
-        jsonFile = $.getJSON( "http://nir-jackson-portfolio.herokuapp.com/poi1/js/JsonFile.json", function() {
+        jsonFile = $.getJSON( "JsonFile.json", function(result) {
 			AR.logger.debug("success!");
           
         })
@@ -22,10 +22,10 @@ var World = {
             AR.logger.debug( "second success" );
           })
           .fail(function() {
-            AR.logger.debug( "error" );
+            AR.logger.debug( "error loading json :'(" );
           })
           .always(function() {
-            AR.logger.debug( "complete" );
+            //AR.logger.debug( "complete" );
           });
 
         // Perform other work here ...
@@ -96,12 +96,12 @@ var World = {
 
 //alert("Initial");
 AR.logger.activateDebugMode();
-//AR.logger.debug("TEST");
+AR.logger.debug("Start");
 AR.context.onLocationChanged = World.locationChanged;
 
-
+/*
 AR.logger.debug("ready!!!!");
-$.getJSON("JsonFile.json", function(result){
+$.getJSON("JsonFile.js", function(result){
     $.each(result, function(i, field){
     	AR.logger.debug(field);
         //$("div").append(field + " ");
@@ -114,6 +114,6 @@ $.getJSON("http://nir-jackson-portfolio.herokuapp.com/poi1/js/JsonFile.json", fu
     });
 });
 
-
+*/
 
 
