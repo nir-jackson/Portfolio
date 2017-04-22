@@ -99,4 +99,20 @@ AR.logger.activateDebugMode();
 AR.logger.debug("TEST");
 AR.context.onLocationChanged = World.locationChanged;
 
+$(document).ready(function(){
+	console.log("ready!");
+	$.getJSON("JsonFile.json", function(result){
+        $.each(result, function(i, field){
+        	console.log(field);
+            //$("div").append(field + " ");
+        });
+    });
+    $.getJSON("http://nir-jackson-portfolio.herokuapp.com/poi1/js/JsonFile.json", function(result){
+        $.each(result, function(i, field){
+        	console.log(field);
+            //$("div").append(field + " ");
+        });
+    });
+});
+
 
