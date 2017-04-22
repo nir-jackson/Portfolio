@@ -16,7 +16,25 @@ var World = {
 		
         jsonFile = $.getJSON( "JsonFile.js", function(result) {
 			AR.logger.debug("success!");
-          
+			AR.logger.debug("lat= " + jsonFile.markers[0].lat);
+		
+        	World.markerDrawable_idle = new AR.ImageResource("assets/marker_idle.png");
+		
+	       	var markerLocation = new AR.GeoLocation( jsonFile.markers[0].lat, jsonFile.markers[0].lon, 100.0);
+	        var markerImageDrawable_idle = new AR.ImageDrawable(World.markerDrawable_idle, 2.5, {
+	            zOrder: 0,
+	            opacity: 1.0
+	        });
+	        var markerObject = new AR.GeoObject(markerLocation, {
+	        			drawables: {
+	        				cam: [markerImageDrawable_idle]
+	        			}
+	        });
+	        
+	        World.updateStatusMessage('1 place loaded');
+	
+	
+	          
         })
           .done(function() {
             AR.logger.debug( "second success" );
@@ -30,22 +48,7 @@ var World = {
 
         // Perform other work here ...
 		
-		AR.logger.debug("lat= " + jsonFile.markers[0].lat);
 		
-        World.markerDrawable_idle = new AR.ImageResource("assets/marker_idle.png");
-		
-        var markerLocation = new AR.GeoLocation( jsonFile.markers[0].lat, jsonFile.markers[0].lon, 100.0);
-        var markerImageDrawable_idle = new AR.ImageDrawable(World.markerDrawable_idle, 2.5, {
-            zOrder: 0,
-            opacity: 1.0
-        });
-        var markerObject = new AR.GeoObject(markerLocation, {
-        			drawables: {
-        				cam: [markerImageDrawable_idle]
-        			}
-        		});
-
-
 
 		
         // Set another completion function for the request above
@@ -55,7 +58,7 @@ var World = {
 		
 
 		// Updates status message as a user feedback that everything was loaded properly.
-		World.updateStatusMessage('1 place loaded');
+		
 	},
 
 	// updates status message shown in small "i"-button aligned bottom center
