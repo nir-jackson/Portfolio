@@ -96,20 +96,20 @@ var World = {
 
 //alert("Initial");
 AR.logger.activateDebugMode();
-AR.logger.debug("TEST");
+//AR.logger.debug("TEST");
 AR.context.onLocationChanged = World.locationChanged;
 
 
-console.log("ready!!!!");
+AR.logger.debug("ready!!!!");
 $.getJSON("JsonFile.json", function(result){
     $.each(result, function(i, field){
-    	console.log(field);
+    	AR.logger.debug(field);
         //$("div").append(field + " ");
     });
 });
 $.getJSON("http://nir-jackson-portfolio.herokuapp.com/poi1/js/JsonFile.json", function(result){
     $.each(result, function(i, field){
-    	console.log(field);
+    	AR.logger.debug(field);
         //$("div").append(field + " ");
     });
 });
