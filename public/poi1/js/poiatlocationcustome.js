@@ -81,7 +81,7 @@ var World = {
 		*/
 		if (!World.initiallyLoadedData) {
 			// creates a poi object with a random location near the user's location
-			//alert("initilize the world biatch!");
+			alert("initilize the world biatch!");
 			World.loadPoisFromJsonData();
 			World.initiallyLoadedData = true;
 		}
