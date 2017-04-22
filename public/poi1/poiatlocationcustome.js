@@ -14,7 +14,7 @@ var World = {
 	loadPoisFromJsonData: function loadPoisFromJsonDataFn() {
 		
 		
-        jsonFile = $.getJSON( "JsonFile.json", function(result) {
+        jsonFile = $.getJSON( "JsonFile.js", function(result) {
 			AR.logger.debug("success!");
           
         })
@@ -22,7 +22,7 @@ var World = {
             AR.logger.debug( "second success" );
           })
           .fail(function() {
-            AR.logger.debug( "error loading json :'(" );
+            AR.logger.error( "error loading json :'(" );
           })
           .always(function() {
             //AR.logger.debug( "complete" );
