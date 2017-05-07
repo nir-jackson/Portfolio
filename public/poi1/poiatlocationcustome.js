@@ -16,22 +16,25 @@ var World = {
 		
         jsonFile = $.getJSON( "JsonFile.js", function(result) {
 			AR.logger.debug("success!");
-			AR.logger.debug("lat= " + result.markers[0].lat);
-			AR.logger.debug("here1");
+			//AR.logger.debug("lat= " + result.markers[0].lat);
+			//AR.logger.debug("here1");
         	World.markerDrawable_idle = new AR.ImageResource("assets/marker_idle.png");
-		
-	       	var markerLocation = new AR.GeoLocation( result.markers[0].lat, result.markers[0].lon, 100.0);
-	        var markerImageDrawable_idle = new AR.ImageDrawable(World.markerDrawable_idle, 2.5, {
-	            zOrder: 0,
-	            opacity: 1.0
-	        });
-	        var markerObject = new AR.GeoObject(markerLocation, {
-	        			drawables: {
-	        				cam: [markerImageDrawable_idle]
-	        			}
-	        });
-	        AR.logger.debug("here2");
-	        World.updateStatusMessage('1 place loaded');
+        	
+        	for (var i=0; i<result.markers.length ; i++){
+        		
+		       	var markerLocation = new AR.GeoLocation( result.markers[i].lat, result.markers[i].lon, 100.0);
+		        var markerImageDrawable_idle = new AR.ImageDrawable(World.markerDrawable_idle, 2.5, {
+		            zOrder: 0,
+		            opacity: 1.0
+		        });
+		        var markerObject = new AR.GeoObject(markerLocation, {
+		        			drawables: {
+		        				cam: [markerImageDrawable_idle]
+		        			}
+		        });
+	        }
+	        //AR.logger.debug("here2");
+	        World.updateStatusMessage(i + ' places loaded');
 	
 	
 	          
