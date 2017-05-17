@@ -1,9 +1,8 @@
 var jackson;
-var fs;
-
+var geocoder;
 
 $(document).ready(function(){
-		fs = require('fs');
+		//fs = require('fs');
 		
 		getJsonFunc();
 		
@@ -15,21 +14,29 @@ $(document).ready(function(){
 			var tmpval3 = $('#inpRating').val();
 			var tmpval4 = $('#inpPrice').val();
 			var tmpval5 = $('#inpDescription').val();
-			var temp = 
-			{
-				"name":tmpval1,
-				"address":tmpval2,
-				"lat":66.6,
-				"lon":66.6,
-				"rating":tmpval3,
-				"price":tmpval4,
-				"description":tmpval5,
-				"isActive":true	
-			}
+			//var geocode = getGeolocation(tmpval2);
+			var adjustedaddress = tmpval2.replace(/ /g,'+');
+			var tempstring = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + adjustedaddress +"&key=AIzaSyAc62NykGU-apZKUy-fFLS56yWrIU2ZSdk";
+			$.getJSON(tempstring, function(result){
+			 	
+			 	var temp = 
+				{
+					"name":tmpval1,
+					"address":tmpval2,
+					"lat":result.results[0].geometry.location.lat,
+					"lon":result.results[0].geometry.location.lng,
+					"rating":tmpval3,
+					"price":tmpval4,
+					"description":tmpval5,
+					"isActive":true	
+				}
+				
+				//console.log(temp);
+				jackson.markers.push(temp);
+				refreshJsonFunc();	
+			 	
+			});
 			
-			//console.log(temp);
-			jackson.markers.push(temp);
-			refreshJsonFunc();	
 			
 		});
 		
@@ -55,12 +62,10 @@ $(document).ready(function(){
 		
 		//save jackson to file
 		$( "#savebutton" ).click(function() {
-			fs.writeFile('JsonFile.js', jackson, function (err) {
-				if (err) throw err;
-				console.log('Saved!');
-			});
 			
+			$('#maintext').text(JSON.stringify(jackson));
 		});
+		
 		
 
 
@@ -86,6 +91,8 @@ function getJsonFunc(){
 	//console.log("here!");
 	$.getJSON("JsonFile.js", function(result){
 		jackson = result;
+		
+		
 		//console.log(jackson);
        for (var i=0; i<jackson.markers.length; i++){
        		$('#maintext').append(i + ": " + jackson.markers[i].name + ", ");
@@ -100,5 +107,13 @@ function getJsonFunc(){
 }
 
 function getGeolocation (address) {
-  
+	var adjustedstring = address.replace(/ /g,'+');
+	var tempstring = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + adjustedstring +"&key=AIzaSyAc62NykGU-apZKUy-fFLS56yWrIU2ZSdk";
+	 $.getJSON(tempstring, function(result){
+	 	//console.log("I have IT!!!");
+	 	//console.log(result);
+	 	return result;
+	 	
+	 });
 }
+
