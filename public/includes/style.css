@@ -5,7 +5,7 @@
 }
 
 *{
-	margin: 0; padding: 0; color:white; font-family:'thempo', Gautami;
+	margin: 0; padding: 0; color:white; font-family: Gautami;
 }
 
 
@@ -18,12 +18,12 @@ section {
 	width: 70%;
 }
 .wrapper > p{
-	margin-top: 20%;
+	margin-top: 40px;
 	font-size: 20px;
 }
 .wrapper > img{
 	float: right;
-	margin-top: -400px;
+	margin-top: -300px;
 }
 nav {
 	left:0px;
@@ -45,5 +45,5 @@ nav > button:hover{
 }
 
 h1 {
-	margin-top: 50px;
+	margin-top: 100px;
 }
