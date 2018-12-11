@@ -6,29 +6,32 @@
         <title>Nir Jackson</title>
         <script type="text/javascript" src="includes/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="includes/jquery.onepage-scroll.min.js"></script>
+        <script type="text/javascript" src="includes/jquery.flexslider.js"></script>
         <script type="text/javascript" src="includes/script.js"></script>
         
         <link rel="stylesheet" type="text/css" href="includes/onepage-scroll.css">
+        <link rel="stylesheet" type="text/css" href="includes/flexslider.css">
         <link rel="stylesheet" type="text/css" href="includes/style.css">
     </head>
     <body>
     	<nav>
-    		<button id="home">Home</button><br>
-    		<button id="providence">Providence</button><br>
-    		<button id="tots">Tots</button><br>
-    		<button id="shura">Shura Tachtona</button><br>
-    		<button id="contact">Contact Me</button><br>
+    		<button class="page1" style="">About Me</button><br>
+    		<button class="page2">Cocos2D JS</button><br>
+    		<button class="page3">Unity3D</button><br>
+    		<button class="page4">Construct2</button><br>
+    		<button class="page5">Web</button><br>
     	</nav>
         <div class="main">
-        	
-        	<section style="background-image: url('images/back1.jpg');">
+
+        	<section class="page1">
         		<div class="wrapper">
         			<h1>About Me</h1>
-        			<p>My name is Nir Jackson I'm a Software Engineer and Game Developer.<br>
-        			 	I have more than 2 years of experience in Game Development using Unity, Cocos, and Construct.<br>
-						I'm currently Employed at "Lucky Fish", where I create slot machine games using Cocos Creator (JS).<br>
-        			 	Before that I worked on a poker game called Loaded 8's using Unity 3D. <br>
-        			 	In addition to my employment I created a few small scale games for collage.<br>
+        			<p>Hey, I'm <b>Nir Jackson</b>, I'm a <b>Game Developer</b> and I love saying that.<br>
+                        I have a B.Sc degree in <b>Software Engineering</b> from Shenkar College of Engineering, Design ant Art.<br>
+        			 	I have more than 2 years of experience in Game Development using <b>Unity3D</b>, <b>Cocos2D Js</b>, and <b>Construct2</b>.<br>
+						I'm currently Employed at "Lucky Fish", where I create slot machine games using <b>Cocos2D (JS)</b>.<br>
+        			 	Before that I worked on a poker game called Loaded 8's using <b>Unity 3D</b>.<br>
+        			 	In addition to my employment I've created a few small scale games for collage like <b>Providence</b> and <b>Tots</b>.<br>
         			 	I'm looking for interesting projects that will challenge my proven skills.<br>
         			 	I'm a gamer and there is nothing more satisfying than creating a game <br>
 						that I would enjoy playing myself.<br>
@@ -37,27 +40,48 @@
         			 Phone: 052-5566001<br>
         			 </p>
         		</div>
-        		
         	</section>
-        	<section style="background-image: url('images/back2.jpg');">
-        		<div class="wrapper">
-					<h1>Cocos Creator - OMG fortune - Lucky fish</h1>
-        			<p>
 
+        	<section class="page2">
+        		<div class="wrapper">
+					<h1>Cocos2D Js</h1>
+        			<p>
+                        <h2>Lucky Fish Games - OMG Furtune - 2/2018 to current</h2>
+                        <a href="https://apps.facebook.com/omgfortune/" target="_blank">OMG Furtune Facebook app</a>
+                        <div class="galleryContainer">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="images/omg1.png">
+                                    </li>
+                                    <li>
+                                        <img src="images/omg2.png">
+                                    </li>
+                                    <li>
+                                        <img src="images/omg3.png">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
         			</p>
         		</div>
         	</section>
-        	<section style="background-image: url('images/back3.jpg');">
+
+        	<section class="page3">
         		<div class="wrapper">
-					<h1>Unity 3D - Loaded8's - Yamia Play (JTG)</h1>
+					<h1>Unity 3D</h1>
         			<p>
+                        <h2>Yamia Play (JTG) -  Loaded8's - 2/2017 to 11/2017</h2>
+
+                        <h2>Providence - Final College project</h2>
 
 					</p>
         		</div>
         	</section>
-        	<section style="background-image: url('images/back4.jpg');">
+
+        	<section class="page4">
         		<div class="wrapper">
-					<h1>Unity 3D - Providence - Final College project</h1>
+					<h1>Unity 3D - </h1>
 	        		<p style="color: black">
 						Providence is the final project for my degree.<br>
 						It is essentially a simulation, not a game.<br>
@@ -66,20 +90,21 @@
 						and set it free in a virtual island with the mission to survive. <br>
 						Currently the player interaction is at a minimum <br>
 						but we are working on adding more mechanics and interactivity. <br>
-						You can play the game online NOW by clicking the link. <br>
 						<br>
 	        		</p>
 					<iframe width="420" height="315" src="https://www.youtube.com/embed/S4vjJQHzHls"></iframe>
         		</div>
         	</section>
-        	<section style="background-image: url('images/back5.jpg');">
+
+        	<section class="page5">
         		<div class="wrapper">
 					<h1>Construct - Tots - Personal game project</h1>
 					<p style="color:black">
-						<a href="https://nir-jackson-portfolio.herokuapp.com/tots">Play the game</a>
+						<a href="https://nir-jackson-portfolio.herokuapp.com/tots" target="_blank">Play the game</a>
 					</p>
     			</div>
         	</section>
+
         </div>
     </body>
 </html>

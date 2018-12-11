@@ -1,13 +1,37 @@
 @font-face {
     font-family: 'thempo';
     src: url('ThempoNewSt.ttf');
-
 }
 
 *{
-	margin: 0; padding: 0; color:white; font-family: Gautami;
+	margin: 0; padding: 0; font-family: Gautami;
+}
+a{
+	font-weight: bold;
+	color: inherit;
 }
 
+
+.page1 {
+	color: white;
+	background-image: url('../images/back1.jpg');
+}
+.page2 {
+	color: white;
+	background-image: url('../images/back2.jpg');
+}
+.page3 {
+	color: black;
+	background-image: url('../images/back3.jpg');
+}
+.page4 {
+	color: black;
+	background-image: url('../images/back4.jpg');
+}
+.page5 {
+	color: black;
+	background-image: url('../images/back5.jpg');
+}
 
 section {
 	margin:auto;
@@ -26,8 +50,8 @@ section {
 	margin-top: -300px;
 }
 nav {
-	left:0px;
-	top:30%;
+	left:50px;
+	top:18%;
 	position:fixed;
 	z-index: 99;
 }
@@ -46,4 +70,22 @@ nav > button:hover{
 
 h1 {
 	margin-top: 100px;
+}
+
+b {
+	color: #ffff90 !important;
+	font-size: 24px;
+}
+
+.galleryContainer{
+	width: 1000px;
+	height: 563px;
+}
+
+.flex-prev{
+	background-image: url('../images/prev.png');
+}
+
+.flex-next{
+	background-image: url('../images/next.png');
 }
