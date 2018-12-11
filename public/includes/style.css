@@ -56,6 +56,7 @@ nav {
 	z-index: 99;
 }
 nav > button{
+	outline: none;
 	margin-top:20px;
 	width: 180px;
 	height: 50px;	
@@ -82,10 +83,19 @@ b {
 	height: 563px;
 }
 
-.flex-prev{
-	background-image: url('../images/prev.png');
+.custom-navigation{
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	position: relative;
+	top: -350px;
+	margin-left: 10px 
+}
+.custom-navigation img{
+	max-width: 30px;
 }
 
-.flex-next{
-	background-image: url('../images/next.png');
+.custom-controls-container{
+	display: table-cell;
+	width: 900px;
 }

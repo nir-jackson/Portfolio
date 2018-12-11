@@ -25,6 +25,9 @@ $(document).ready(function(){
 	$(".flexslider").flexslider({
 		animation: "slide",
 		itemWidth: 1100,
+		controlsContainer: $(".custom-controls-container"),
+    	customDirectionNav: $(".custom-navigation a"),
+    	controlNav: false
 	});
 	
 
