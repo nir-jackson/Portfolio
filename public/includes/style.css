@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'thempo';
-    src: url('ThempoNewSt.ttf');
+    font-family: 'asap';
+    src: url('asap.regular.otf');
 }
 
 *{
-	margin: 0; padding: 0; font-family: Gautami;
+	margin: 0; padding: 0; font-family: "asap",Gautami;
 }
 a{
 	font-weight: bold;
