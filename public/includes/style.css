@@ -45,25 +45,23 @@ section {
 	margin-top: 40px;
 	font-size: 20px;
 }
-.wrapper > img{
-	float: right;
-	margin-top: -300px;
-}
+
 nav {
-	left:50px;
 	top:18%;
+	width: 12.5%;
+	padding-left: 2.5%;
 	position:fixed;
 	z-index: 99;
 }
 nav > button{
 	outline: none;
 	margin-top:20px;
-	width: 180px;
+	width: 80%;
 	height: 50px;	
 	background-color:#343434;
 	border-radius: 8px;
 	transition-duration: 0.4s;
-	font-size:24px;
+	font-size:20px;
 }
 nav > button:hover{
 	background-color: #6b6b6b;
@@ -81,6 +79,7 @@ b {
 .galleryContainer{
 	width: 1000px;
 	height: 563px;
+	margin-left: 50px;
 }
 
 .custom-navigation{
@@ -89,7 +88,7 @@ b {
 	table-layout: fixed;
 	position: relative;
 	top: -350px;
-	margin-left: 10px 
+	margin-left: -60px 
 }
 .custom-navigation img{
 	max-width: 30px;
@@ -97,5 +96,9 @@ b {
 
 .custom-controls-container{
 	display: table-cell;
-	width: 900px;
+	width: 1090px;
+}
+
+.connections *{
+	float: left;
 }
