@@ -76,29 +76,6 @@ b {
 	font-size: 24px;
 }
 
-.galleryContainer{
-	width: 1000px;
-	height: 563px;
-	margin-left: 50px;
-}
-
-.custom-navigation{
-	display: table;
-	width: 100%;
-	table-layout: fixed;
-	position: relative;
-	top: -350px;
-	margin-left: -60px 
-}
-.custom-navigation img{
-	max-width: 30px;
-}
-
-.custom-controls-container{
-	display: table-cell;
-	width: 1090px;
-}
-
 .connections *{
 	float: left;
 }

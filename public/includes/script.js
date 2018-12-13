@@ -22,13 +22,8 @@ $(document).ready(function(){
 		$(".main").moveTo(5);
 	});
 
-	$(".flexslider").flexslider({
-		animation: "slide",
-		itemWidth: 1100,
-		controlsContainer: $(".custom-controls-container"),
-    	customDirectionNav: $(".custom-navigation a"),
-    	controlNav: false
-	});
-	
+	$('.bxslider').bxSlider({
+    	slideWidth: 1000
+  	});
 
 });
