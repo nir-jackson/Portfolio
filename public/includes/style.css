@@ -14,23 +14,23 @@ a{
 
 .page1 {
 	color: white;
-	background-image: url('../images/back1.jpg');
+	background-color: #3C3C64;
 }
 .page2 {
 	color: white;
-	background-image: url('../images/back2.jpg');
+	background-color: #3C3C64;
 }
 .page3 {
-	color: black;
-	background-image: url('../images/back3.jpg');
+	color: white;
+	background-color: #3C3C64;
 }
 .page4 {
-	color: black;
-	background-image: url('../images/back4.jpg');
+	color: white;
+	background-color: #3C3C64;
 }
 .page5 {
-	color: black;
-	background-image: url('../images/back5.jpg');
+	color: white;
+	background-color: #3C3C64;
 }
 
 section {
@@ -64,7 +64,7 @@ nav > button{
 	font-size:20px;
 }
 nav > button:hover{
-	background-color: #6b6b6b;
+	background-color: #64648C;
 }
 
 h1 {
